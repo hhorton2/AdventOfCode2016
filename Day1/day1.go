@@ -70,26 +70,24 @@ func solvePartTwo(dataArray []string) {
 		}
 		for i := 0; i < steps; i++ {
 			currentDirection.steps = currentDirection.steps + 1
-			newVertex := currentVertex
 			switch currentDirection {
 			case North:
-				foundHq = checkIfAlreadyVisited(grid, Vertex{x: currentVertex.x, y: currentVertex.y + 1}, foundHq)
-				newVertex.y += 1
+				currentVertex.y += 1
+				foundHq = checkIfAlreadyVisited(grid, currentVertex, foundHq)
 			case East:
-				foundHq = checkIfAlreadyVisited(grid, Vertex{x: currentVertex.x + 1, y: currentVertex.y}, foundHq)
-				newVertex.x += 1
+				currentVertex.x += 1
+				foundHq = checkIfAlreadyVisited(grid, currentVertex, foundHq)
 			case South:
-				foundHq = checkIfAlreadyVisited(grid, Vertex{x: currentVertex.x, y: currentVertex.y - 1}, foundHq)
-				newVertex.y -= 1
+				currentVertex.y -= 1
+				foundHq = checkIfAlreadyVisited(grid, currentVertex, foundHq)
 			default:
-				foundHq = checkIfAlreadyVisited(grid, Vertex{x: currentVertex.x - 1, y: currentVertex.y}, foundHq)
-				newVertex.x -= 1
+				currentVertex.x -= 1
+				foundHq = checkIfAlreadyVisited(grid, currentVertex, foundHq)
 			}
 			if foundHq {
 				break
 			} else {
-				grid = append(grid, newVertex)
-				currentVertex = newVertex
+				grid = append(grid, currentVertex)
 			}
 		}
 		if foundHq {
