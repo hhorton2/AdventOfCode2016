@@ -13,7 +13,7 @@ func main() {
 	check(err)
 	datString := string(dat)
 	rooms := getRooms(datString)
-	for _,room := range rooms{
+	for _, room := range rooms {
 		fmt.Printf("%v | %v | %v\n", room.encryptedName, room.sectorId, room.checksum)
 	}
 }
@@ -21,9 +21,7 @@ func getRooms(datString string) ([]Room) {
 	regex := regexp.MustCompile(".*\n")
 	matches := regex.FindAllString(datString, -1)
 	var rooms []Room
-	regex = regexp.MustCompile("\n")
-	for i, match := range matches {
-		matches[i] = regex.ReplaceAllString(match, "")
+	for _, match := range matches {
 		checksum := getChecksum(match)
 		sector := getSectorId(match)
 		roomName := getRoomName(match)
