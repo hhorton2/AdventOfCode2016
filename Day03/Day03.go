@@ -1,10 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"regexp"
 	"strconv"
-	"fmt"
 	"sync"
 )
 

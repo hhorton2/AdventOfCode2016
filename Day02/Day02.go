@@ -1,9 +1,9 @@
 package main
 
 import (
-	"strings"
-	"io/ioutil"
 	"fmt"
+	"io/ioutil"
+	"strings"
 )
 
 func main() {

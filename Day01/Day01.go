@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"strings"
-	"strconv"
 	"math"
+	"strconv"
+	"strings"
 )
 
 func main() {
