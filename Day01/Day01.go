@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("Day1/input.txt")
+	dat, err := ioutil.ReadFile("Day01/input.txt")
 	check(err)
 	dataArray := strings.Split(strings.Replace(string(dat), "\n", "", -1), ", ")
 	solvePartOne(dataArray)

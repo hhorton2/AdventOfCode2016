@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("Day4/input.txt")
+	dat, err := ioutil.ReadFile("Day04/input.txt")
 	check(err)
 	datString := string(dat)
 	rooms := getRooms(datString)

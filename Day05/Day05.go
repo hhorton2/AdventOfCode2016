@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("Day5/input.txt")
+	dat, err := ioutil.ReadFile("Day05/input.txt")
 	check(err)
 	datString := string(dat)
 	datString = strings.Replace(datString, "\n", "", -1)

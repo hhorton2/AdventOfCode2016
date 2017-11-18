@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("Day2/input.txt")
+	dat, err := ioutil.ReadFile("Day02/input.txt")
 	check(err)
 	dataArray := strings.Split(string(dat), "\n")
 	dataArray = dataArray[:len(dataArray)-1]

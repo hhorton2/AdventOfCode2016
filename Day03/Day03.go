@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("Day3/input.txt")
+	dat, err := ioutil.ReadFile("Day03/input.txt")
 	check(err)
 	regex := regexp.MustCompile(".*\n")
 	matches := regex.FindAllString(string(dat[:]), -1)
