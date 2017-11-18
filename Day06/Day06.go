@@ -25,7 +25,7 @@ func main() {
 	go aggregateMaximumPositionCounts(positionCountStreamForkA, dayOneResultStream)
 	go aggregateMinimumPositionCounts(positionCountStreamForkB, dayTwoResultStream)
 	fmt.Printf("Day One Result: %v\nExecution took: %v\n", <-dayOneResultStream, time.Since(start))
-	fmt.Printf("Day One Result: %v\nExecution took: %v\n", <-dayTwoResultStream, time.Since(start))
+	fmt.Printf("Day Two Result: %v\nExecution took: %v\n", <-dayTwoResultStream, time.Since(start))
 
 }
 func aggregateMinimumPositionCounts(countStream chan PositionCount, resultStream chan string) {
